@@ -9,7 +9,6 @@ const AvailableTables = () => {
   useEffect(() => {
     const newList = TABLE_NAMES.filter((name) => name.startsWith(searchValue));
     setTableList(newList);
-    console.log("UseEffect called");
   }, [searchValue]);
 
   return (
@@ -29,7 +28,7 @@ const AvailableTables = () => {
         <ul className="table-names">
           {tableList.length > 0 &&
             tableList.map((name, idx) => (
-              <li className={`table-name ${idx % 2 === 0 ? "even" : "odd"}`}>
+              <li key={name+idx} className={`table-name ${idx % 2 === 0 ? "even" : "odd"}`}>
                 {name}
               </li>
             ))}

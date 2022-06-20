@@ -28,13 +28,11 @@ const fetchData = (
   setHistory,
   query
 ) => {
-  console.log("Fetch Data called on : ", tableName);
   if (TABLE_NAMES.includes(tableName)) {
     const storedData = localStorage.getItem("northwind-data-csv");
     const object = JSON.parse(storedData);
 
     if (object === null || object[tableName] === undefined) {
-      console.log("Fetch");
       fetch(getURL(tableName), {
         headers: {
           Accept: "application/vnd.github.v4+raw"
@@ -74,7 +72,6 @@ const fetchData = (
           setResultIsLoading(false);
         });
     } else {
-      console.log("Don't fetch");
       const localdata = localStorage.getItem("northwind-data-csv");
       const object = JSON.parse(localdata);
 

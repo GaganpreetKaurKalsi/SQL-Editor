@@ -16,7 +16,6 @@ const SQLEditor = () => {
   const [resultIsLoading, setResultIsLoading] = useState(false);
   const [history, setHistory] = useState([]);
 
-  console.log(history);
   // Function to get Table name out of the query String
   const getTableName = (items) => {
     const idx = items.indexOf("FROM");
@@ -29,7 +28,7 @@ const SQLEditor = () => {
 
   const executeQuery = (query) => {
     // setHistory((prev) => [query, ...prev]);
-    if (query.length > 0) {
+    if (query.split(" ").length > 3 && query.split(" ")[3].length > 0) {
       setResultIsLoading(true);
       const items = query.split(" ");
       if (items[0].toLowerCase() === "select") {
@@ -45,6 +44,9 @@ const SQLEditor = () => {
         toast.error("Sorry! SELECT queries are only supported for now.");
         setResultIsLoading(false);
       }
+    } else{
+      toast.error("Sorry! Something is wrong with your query");
+      setResultIsLoading(false);
     }
   };
 

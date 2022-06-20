@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../assets/logo.png";
 import "./SideNavbar.scss";
 import { exit } from "../assets/svgFile";
@@ -10,7 +10,6 @@ const links = [
 ];
 
 const SideNavbar = () => {
-  const [activeLink, setActiveLink] = useState("query-editor");
   return (
     <div className="side-navbar">
       <img src={logo} alt="logo" className="app-logo" />
@@ -18,11 +17,10 @@ const SideNavbar = () => {
       <div className="nav-links">
         <ul className="link-items">
           {links.map((link) => (
-            <li
-              onClick={() => {
-                setActiveLink(link.value);
-              }}
-              className={`link-item ${activeLink === link.value && "active"}`}
+            <li key={link.value}
+              className={`link-item ${
+                "query-editor" === link.value && "active"
+              }`}
             >
               {link.label}
             </li>

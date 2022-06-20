@@ -2,7 +2,6 @@ import React from "react";
 import { useTable } from "react-table";
 
 function ReactTable({ columnsArray, data }) {
-  console.log(columnsArray, data);
   const columns = React.useMemo(
     () =>
       columnsArray.map((col, idx) => ({
@@ -11,7 +10,6 @@ function ReactTable({ columnsArray, data }) {
       })),
     [columnsArray]
   );
-  console.log(columns);
 
   const {
     getTableProps,

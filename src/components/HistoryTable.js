@@ -8,7 +8,6 @@ const HistoryTable = ({ history }) => {
   useEffect(() => {
     const newList = history.filter(({ query }) => query.includes(searchValue));
     setTableList(newList);
-    console.log("UseEffect called");
   }, [searchValue, history]);
 
   return (
@@ -28,7 +27,7 @@ const HistoryTable = ({ history }) => {
         <ul className="table-names history">
           {tableList.length > 0 &&
             tableList.map(({ query, status }, idx) => (
-              <li className="table-name">
+              <li key={idx+query} className="table-name">
                 <span className={`query ${idx % 2 === 0 ? "even" : "odd"}`}>
                   {query}
                 </span>
