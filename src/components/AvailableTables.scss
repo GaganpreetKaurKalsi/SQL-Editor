@@ -1,0 +1,88 @@
+.table-names-container{
+  height: 100%;
+  .head{
+    color: #2F2E41;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .search-bar{
+    margin-top: 10px;
+    .searchbar{
+      background: #F0F0F0;
+      border-radius: 8px;
+      border: none;
+      width: calc(100% - 30px);
+      padding: 10px 15px;
+    }
+  }
+  .tablename-container{
+    height: 60%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 20px;
+    .table-names{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      .table-name{
+        padding: 5px;
+        margin-bottom: 10px;
+        color: #374151;
+        border-radius: 5px;
+        &.odd{
+          background-color: #f3f4f6;
+        }
+        &.even{
+          background-color: #0ea5e9;
+          color: white;
+        } 
+      }
+      &.history{
+        .table-name{
+          background-color: white;
+          display: flex;
+          place-items: center;
+          background-color: #f3f4f6;
+          .query{
+            font-size: 14px;
+          }
+          .status{
+            font-size: 14px;
+            height: fit-content;
+            border-radius: 10px;
+            padding: 4px 8px;
+            margin-left:10px;
+          }
+          .success{
+            background-color: #4BB543;
+            color: white
+          }
+          .error{
+            background-color: #ef4444;
+            color: white;
+          }
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #d1d5db;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #9ca3af;
+    }
+  }
+}

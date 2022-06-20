@@ -1,0 +1,64 @@
+.side-navbar{
+  width: 18%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  .app-logo{
+      max-height: 60px;
+      max-width: 120px;
+      margin: 5px auto;
+      width: 90%;
+  }
+  .h-line{
+      border: 0.5px solid #D1D5DB;
+      margin :0;
+  }
+  .nav-links{
+      margin: 80px auto;
+      .link-items{
+          list-style: none;
+          padding:0 10px;
+          .link-item{
+              border-radius: 10px;
+              padding: 12px 20px;
+              margin: 15px auto;
+              text-align: left;
+              cursor: pointer;
+              font-weight: 600;
+              font-size: 16px;
+              color: #2F2E41;
+              &:hover{
+                  background-color: #e0f2fe;
+              }
+              &.active{
+                  background: #0EA5E9;
+                  color: white;
+                  font-weight: bold;
+              }
+          }
+      }
+  }
+  .logout{
+      background-color: #F3F4F6;
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin: 15px 10px;
+      font-weight: 600;
+      display: flex;
+      place-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      width: -webkit-fill-available;
+      cursor: pointer;
+      &:hover{
+          background-color: #e5e7eb;
+      }
+      .icon{
+          height: 20px;
+          width: 20px;
+          display: inline-block;
+          margin-right: 10px;
+      }
+  }
+}

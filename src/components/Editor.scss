@@ -1,0 +1,42 @@
+.editor{
+  height: 100%;
+  width: 100%;
+  .cm-theme-light{
+    height: 80%;
+    .cm-editor{
+      height: 100%;
+      .cm-gutters{
+        background-color: #e5e7eb;
+      }
+    }
+  }
+  .buttons{
+    text-align: right;
+    margin-top: 10px;
+    .button{
+      cursor: pointer;
+      max-height: 40px;
+      height: 100%;
+      width: 80px;
+      font-size: 14px;
+      padding: 6px 15px;
+      border-radius: 6px;
+      border: none;
+      margin-left: 10px;
+      &.run{
+        background-color: #008000;
+        color: white;
+        &:hover{
+          background-color:#006400;
+        }
+      }
+      &.clear{
+        background-color: #d1d5db;
+        &:hover{
+          background-color: #9ca3af;
+        }
+      }
+      
+    }
+  }
+}
