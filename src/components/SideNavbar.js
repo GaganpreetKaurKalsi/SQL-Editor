@@ -11,7 +11,7 @@ const links = [
 const SideNavbar = () => {
   return (
     <div className="side-navbar">
-      <img src={"/logo.png"} alt="logo" className="app-logo" />
+      <img src={"./logo.png"} alt="logo" className="app-logo" />
       <hr className="h-line" />
       <div className="nav-links">
         <ul className="link-items">
