@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import "./AvailableTables.scss";
 
 const HistoryTable = ({ history }) => {
@@ -27,7 +27,7 @@ const HistoryTable = ({ history }) => {
         <ul className="table-names history">
           {tableList.length > 0 &&
             tableList.map(({ query, status }, idx) => (
-              <li key={idx+query} className="table-name">
+              <li key={idx + query} className="table-name">
                 <span className={`query ${idx % 2 === 0 ? "even" : "odd"}`}>
                   {query}
                 </span>
@@ -44,4 +44,4 @@ const HistoryTable = ({ history }) => {
   );
 };
 
-export default HistoryTable;
+export default memo(HistoryTable);

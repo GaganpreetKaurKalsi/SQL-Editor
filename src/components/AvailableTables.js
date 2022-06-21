@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import TABLE_NAMES from "../constants/constants";
 import "./AvailableTables.scss";
 
@@ -28,7 +28,10 @@ const AvailableTables = () => {
         <ul className="table-names">
           {tableList.length > 0 &&
             tableList.map((name, idx) => (
-              <li key={name+idx} className={`table-name ${idx % 2 === 0 ? "even" : "odd"}`}>
+              <li
+                key={name + idx}
+                className={`table-name ${idx % 2 === 0 ? "even" : "odd"}`}
+              >
                 {name}
               </li>
             ))}
@@ -39,4 +42,4 @@ const AvailableTables = () => {
   );
 };
 
-export default AvailableTables;
+export default memo(AvailableTables);

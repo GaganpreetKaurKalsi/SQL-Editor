@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Editor from "../components/Editor";
 import ResultSection from "../components/ResultSection";
 import SideNavbar from "../components/SideNavbar";
@@ -26,8 +26,7 @@ const SQLEditor = () => {
     }
   };
 
-  const executeQuery = (query) => {
-    // setHistory((prev) => [query, ...prev]);
+  const executeQuery = useCallback(() => {
     if (query.split(" ").length > 3 && query.split(" ")[3].length > 0) {
       setResultIsLoading(true);
       const items = query.split(" ");
@@ -44,11 +43,11 @@ const SQLEditor = () => {
         toast.error("Sorry! SELECT queries are only supported for now.");
         setResultIsLoading(false);
       }
-    } else{
+    } else {
       toast.error("Sorry! Something is wrong with your query");
       setResultIsLoading(false);
     }
-  };
+  }, [query]);
 
   useEffect(() => {
     if (query === "") {

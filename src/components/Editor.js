@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { sql } from "@codemirror/lang-sql";
 import "./Editor.scss";
@@ -38,4 +38,4 @@ const Editor = ({ setQuery, query, executeQuery }) => {
   );
 };
 
-export default Editor;
+export default memo(Editor);

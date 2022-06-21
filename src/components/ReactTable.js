@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo, useMemo } from "react";
 import { useTable } from "react-table";
 
 function ReactTable({ columnsArray, data }) {
-  const columns = React.useMemo(
+  const columns = useMemo(
     () =>
       columnsArray.map((col, idx) => ({
         Header: col,
@@ -75,4 +75,4 @@ function ReactTable({ columnsArray, data }) {
   );
 }
 
-export default ReactTable;
+export default memo(ReactTable);

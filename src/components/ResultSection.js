@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React, { memo } from "react";
 import ReactTable from "./ReactTable";
 import "./ResultSection.scss";
 import { Oval } from "react-loader-spinner";
 
 const ResultSection = ({ tableName, result, resultIsLoading }) => {
-  useEffect(() => {}, [tableName]);
   return (
     <div className="result-container">
       <div className="head">Result / Output</div>
@@ -35,4 +34,4 @@ const ResultSection = ({ tableName, result, resultIsLoading }) => {
     </div>
   );
 };
-export default ResultSection;
+export default memo(ResultSection);
