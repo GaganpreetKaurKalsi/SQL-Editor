@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../../public/logo.png";
 import "./SideNavbar.scss";
 import { exit } from "../assets/svgFile";
 
@@ -17,7 +17,8 @@ const SideNavbar = () => {
       <div className="nav-links">
         <ul className="link-items">
           {links.map((link) => (
-            <li key={link.value}
+            <li
+              key={link.value}
               className={`link-item ${
                 "query-editor" === link.value && "active"
               }`}
