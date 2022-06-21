@@ -29,7 +29,7 @@ _Note : For now only SELECT queries on given tables are supported. Will increase
 
 <br>
 
-## 🔗 Live URL
+## 🥳 Live URL
 
 The application is hosted on Vercel. Please find the link to it below.            
 <h3><a href="https://sql-editor-react.vercel.app/sql-editor">SQL-Editor</a></h3>
@@ -37,17 +37,23 @@ The application is hosted on Vercel. Please find the link to it below.
 <br>
 
 
-## 💻 Tech Stack
+## 😎 Tech Stack
 
 ![ReactJS](https://img.shields.io/badge/ReactJS-61DAFB?&style=for-the-badge&logo=react&logoColor=white&style=plastic)  ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white&style=plastic)
 
 
 <br>
 
-## 🔴 Some major Dependencies
+## 😧 Some major Dependencies
 - @uiw/react-codemirror ```4.8.1``` - Editor to write query
 - alasql ```1.7.3``` - To run SQL query on a .csv file and return result in form of JSON
 - react-hot-toast ```2.2.0``` - For notifications such as success and error
 - react-loader-spinner ```5.1.5``` - Loader for the table
 - react-table ```7.8.0``` - To create result table
 - sass ```1.52.3``` - for writing CSS
+
+
+<br>
+
+## 🙄 Page load time
+![image](https://user-images.githubusercontent.com/54144759/174902868-1f7cf305-1db6-4396-a20f-fa167601346f.png)
