@@ -1,6 +1,6 @@
 import React from "react";
 import "./SideNavbar.scss";
-import { exit } from "../assets/svgFile";
+import { exit, logo } from "../assets/svgFile";
 
 const links = [
   { label: "Getting Started", value: "getting-started" },
@@ -11,11 +11,7 @@ const links = [
 const SideNavbar = () => {
   return (
     <div className="side-navbar">
-      <img
-        src={require("../assets/logo.png")}
-        alt="logo"
-        className="app-logo"
-      />
+      <div className="app-logo">{logo()}</div>
       <hr className="h-line" />
       <div className="nav-links">
         <ul className="link-items">
