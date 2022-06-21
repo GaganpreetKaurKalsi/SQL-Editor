@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../public/logo.png";
 import "./SideNavbar.scss";
 import { exit } from "../assets/svgFile";
 
@@ -12,7 +11,7 @@ const links = [
 const SideNavbar = () => {
   return (
     <div className="side-navbar">
-      <img src={logo} alt="logo" className="app-logo" />
+      <img src={"/logo.png"} alt="logo" className="app-logo" />
       <hr className="h-line" />
       <div className="nav-links">
         <ul className="link-items">
