@@ -18,7 +18,6 @@ const Editor = ({ setQuery, query, executeQuery }) => {
         <button
           className="clear button"
           onClick={() => {
-            setContent("");
             setQuery("");
           }}
         >

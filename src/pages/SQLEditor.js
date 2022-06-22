@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, memo } from "react";
 import Editor from "../components/Editor";
 import ResultSection from "../components/ResultSection";
 import SideNavbar from "../components/SideNavbar";
@@ -6,8 +6,8 @@ import { fetchData } from "../helpers/helpers";
 import "./SQLEditor.scss";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
-import AvailableTables from "../components/AvailableTables";
-import HistoryTable from "../components/HistoryTable";
+import SearchComponent from "../components/SearchComponent";
+import TABLE_NAMES from "../constants/constants";
 
 const SQLEditor = () => {
   const [tableName, setTableName] = useState("Customers");
@@ -26,8 +26,14 @@ const SQLEditor = () => {
     }
   };
 
-  const executeQuery = useCallback(() => {
-    if (query.split(" ").length > 3 && query.split(" ")[3].length > 0) {
+  const executeQuery = (query) => {
+    console.log("FROM EXECUTE QUERY : ", query);
+    if (query === "") {
+      toast.custom(
+        <div className="customToast">Please enter a query to execute</div>
+      );
+      setResultIsLoading(false);
+    } else if (query.split(" ").length > 3 && query.split(" ")[3].length > 0) {
       setResultIsLoading(true);
       const items = query.split(" ");
       if (items[0].toLowerCase() === "select") {
@@ -47,7 +53,7 @@ const SQLEditor = () => {
       toast.error("Sorry! Something is wrong with your query");
       setResultIsLoading(false);
     }
-  }, [query]);
+  };
 
   useEffect(() => {
     if (query === "") {
@@ -78,10 +84,20 @@ const SQLEditor = () => {
         </div>
         <div className="col2">
           <div className="available-tables-section section">
-            <AvailableTables />
+            {/* <AvailableTables /> */}
+            <SearchComponent
+              searchList={TABLE_NAMES}
+              head={"Available Tables"}
+              type={"table"}
+            />
           </div>
           <div className="history-section section">
-            <HistoryTable history={history} />
+            {/* <HistoryTable history={history} /> */}
+            <SearchComponent
+              searchList={history}
+              head={"History"}
+              type={"history"}
+            />
           </div>
         </div>
       </div>
@@ -89,4 +105,4 @@ const SQLEditor = () => {
   );
 };
 
-export default SQLEditor;
+export default memo(SQLEditor);

@@ -77,9 +77,7 @@ const fetchData = (
 
       convertToJSON(atob(object[tableName])).then(({ data, status }) => {
         setResult(data);
-        setTimeout(() => {
-          setResultIsLoading(false);
-        }, 1000);
+        setResultIsLoading(false);
         setHistory((prev) => [{ query: query, status: status }, ...prev]);
       });
     }
