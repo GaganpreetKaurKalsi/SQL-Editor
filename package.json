@@ -7,9 +7,6 @@
   "main": "src/index.js",
   "dependencies": {
     "@codemirror/lang-sql": "6.0.0",
-    "@emotion/core": "11.0.0",
-    "@emotion/react": "11.9.3",
-    "@emotion/styled": "11.9.3",
     "@fontsource/nunito": "4.5.9",
     "@uiw/react-codemirror": "4.8.1",
     "alasql": "1.7.3",
