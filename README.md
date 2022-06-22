@@ -56,6 +56,33 @@ The application is hosted on Vercel. Please find the link to it below.
 <br>
 
 ## 🙄 Page load time
-![image](https://user-images.githubusercontent.com/54144759/174952479-aee5ec55-ab9c-4776-9302-cb03872d0cb2.png)
-![image](https://user-images.githubusercontent.com/54144759/174952547-3c8ac75b-50ea-40e8-ba62-35aede61386f.png)
+I used Lighthouse Chrome DevTools to check application performace.
+![image](https://user-images.githubusercontent.com/54144759/175161784-aa1a49b2-cddf-480d-a884-35efe602b363.png)
+![image](https://user-images.githubusercontent.com/54144759/175161331-64ed2b8f-92ba-4e6f-98e4-accafe142ed8.png)
 
+**The performance metric varies between 96-98**     
+Others remain constant
+
+
+<br>
+
+
+## 🚶‍♀️🚶‍♀️ Steps taken to optimize
+
+- Used performace optimization hooks - **memo, useMemo and useCalback** to prevent unnecessary rerendering of components and increase performance.     
+- Used code splitting for the code-editor component. Using code splitting for all components lead to decrease in performance for, so applied to only editor.
+
+
+<br>      
+
+
+## 😍 Figma Design
+I created the whole design before starting building the application.
+**The HOME PAGE** is also designed but didn't get time to build it.
+
+<a href="https://www.figma.com/file/czpAvd5q0sG6OdvU3e3Mf5/SQL-Query-Editor?node-id=13%3A12"><b>Link To FIGMA</b></a>
+
+![image](https://user-images.githubusercontent.com/54144759/175165559-cbdd6039-c18e-4b48-8841-6a5b6813cc1f.png)
+
+
+<h2 align="center">THANK YOU!!!</h2>
