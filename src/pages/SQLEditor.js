@@ -5,44 +5,11 @@ import "./SQLEditor.scss";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
 import { Oval } from "react-loader-spinner";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import TABLE_NAMES from "../constants/constants";
+import SearchComponent from "../components/SearchComponent";
+import ResultSection from "../components/ResultSection";
 
 const Editor = lazy(() => import("../components/Editor"));
-
-const SearchComponent = lazy(() => import("../components/SearchComponent"));
-
-const ResultSection = lazy(() => import("../components/ResultSection"));
-
-const skeleton = () => {
-  return (
-    <div className="suspense-skeleton">
-      <div style={{ marginBottom: "10px" }}>
-        <Skeleton count={1} height={30} width={120} />
-      </div>
-      <div style={{ marginBottom: "20px" }}>
-        <Skeleton count={1} height={35} />
-      </div>
-      <div>
-        <Skeleton count={6} height={25} marginBottom={5} />
-      </div>
-    </div>
-  );
-};
-
-const skeletonTable = () => {
-  return (
-    <div className="suspense-skeleton">
-      <div style={{ marginBottom: "30px" }}>
-        <Skeleton count={1} height={30} width={120} />
-      </div>
-      <div>
-        <Skeleton count={8} height={25} marginBottom={5} />
-      </div>
-    </div>
-  );
-};
 
 const loader = () => {
   return (
@@ -125,35 +92,27 @@ const SQLEditor = () => {
             </Suspense>
           </div>
           <div className="result-section section">
-            <Suspense
-              fallback={<div className="skeleton">{skeletonTable()}</div>}
-            >
-              <ResultSection
-                tableName={tableName}
-                result={result}
-                resultIsLoading={resultIsLoading}
-              />
-            </Suspense>
+            <ResultSection
+              tableName={tableName}
+              result={result}
+              resultIsLoading={resultIsLoading}
+            />
           </div>
         </div>
         <div className="col2">
           <div className="available-tables-section section">
-            <Suspense fallback={<div className="skeleton">{skeleton()}</div>}>
-              <SearchComponent
-                searchList={TABLE_NAMES}
-                head={"Available Tables"}
-                type={"table"}
-              />
-            </Suspense>
+            <SearchComponent
+              searchList={TABLE_NAMES}
+              head={"Available Tables"}
+              type={"table"}
+            />
           </div>
           <div className="history-section section">
-            <Suspense fallback={<div className="skeleton">{skeleton()}</div>}>
-              <SearchComponent
-                searchList={history}
-                head={"History"}
-                type={"history"}
-              />
-            </Suspense>
+            <SearchComponent
+              searchList={history}
+              head={"History"}
+              type={"history"}
+            />
           </div>
         </div>
       </div>
