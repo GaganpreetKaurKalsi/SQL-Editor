@@ -11,9 +11,6 @@
         height: calc(100% - 30px);
         margin: 15px;
         width: 70%;
-        .section{
-          // box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-        }
         .editor-section{
           height: 50%;
         }
@@ -41,7 +38,13 @@
           height: calc(50% - 20px);
         }
       }
-      
+  }
+  .suspense-loader{
+    height: 100%;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    place-items: center;
   }
 }
 
