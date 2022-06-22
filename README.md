@@ -56,4 +56,6 @@ The application is hosted on Vercel. Please find the link to it below.
 <br>
 
 ## 🙄 Page load time
-![image](https://user-images.githubusercontent.com/54144759/174902868-1f7cf305-1db6-4396-a20f-fa167601346f.png)
+![image](https://user-images.githubusercontent.com/54144759/174952479-aee5ec55-ab9c-4776-9302-cb03872d0cb2.png)
+![image](https://user-images.githubusercontent.com/54144759/174952547-3c8ac75b-50ea-40e8-ba62-35aede61386f.png)
+
