@@ -14,13 +14,13 @@
 
 ## 🧐 Overview
 An application created using **ReactJS** and **Sass**.          
-You can run SQL queries here.    
+**You can run SQL queries here.**    
 
 The application contains an SQL editor where you can write your query. There are 2 buttons **Clear** and **Run**. You can click on RUN button to run the query. Once RUN is pressed, TableName is searched in the given query and is tallied with the TABLE_NAMES, which is an array of tables names supported by the application. If the table name queried by the user is present in the TABLE_NAMES array, API request is made to fetch data from a URL. Then the data and query is processed with the help of **alasql**. It returns us the data in a JSON format. Then we display the data in form of a table.
 
 The application contains 2 more components - 
-- Table Names section which contains the names of the tables supported so user can easily make the queries. SEARCH BAR provided
-- History Panel where all the queries RUN are stored with there status. SEARCH BAR provided
+- **Table Names section** which contains the names of the tables supported so user can easily make the queries. SEARCH BAR provided
+- **History Panel** where all the queries RUN are stored with there status. SEARCH BAR provided
 
 
 
@@ -37,6 +37,17 @@ The application is hosted on Vercel. Please find the link to it below.
 <br>
 
 
+## 🤗 SOME Queries you can try to run
+1. ```SELECT * FROM Customers```
+2. ```SELECT * FROM Categories```
+3. ```SELECT * FROM Employee_territories;```
+4. ```SELECT * FROM Employees;```
+5. ```SELECT * FROM Orders;```
+6. ```SELECT * FROM Products;```
+
+
+<br>
+
 ## 😎 Tech Stack
 
 ![ReactJS](https://img.shields.io/badge/ReactJS-61DAFB?&style=for-the-badge&logo=react&logoColor=white&style=plastic)  ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white&style=plastic)
@@ -46,7 +57,7 @@ The application is hosted on Vercel. Please find the link to it below.
 
 ## 😧 Some major Dependencies
 - @uiw/react-codemirror ```4.8.1``` - Editor to write query
-- alasql ```1.7.3``` - To run SQL query on a .csv file and return result in form of JSON
+- alasql ```1.7.3``` - To run SQL query on a .csv file and return result in form of JSON object
 - react-hot-toast ```2.2.0``` - For notifications such as success and error
 - react-loader-spinner ```5.1.5``` - Loader for the table
 - react-table ```7.8.0``` - To create result table
@@ -69,8 +80,8 @@ Others remain constant
 
 ## 🚶‍♀️🚶‍♀️ Steps taken to optimize
 
-- Used performace optimization hooks - **memo, useMemo and useCalback** to prevent unnecessary rerendering of components and increase performance.     
-- Used code splitting for the code-editor component. Using code splitting for all components lead to decrease in performance for, so applied to only editor.
+- Used performace optimization hooks - **memo, useMemo and useCallback** to prevent unnecessary re-rendering of components and increase performance.     
+- Used code splitting for the code-editor component. Using code splitting for all components lead to decrease in performance, so applied to only editor.
 
 
 <br>      
