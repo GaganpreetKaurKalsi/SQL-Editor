@@ -87,13 +87,11 @@ Others remain constant
 <br>      
 
 
-## 😍 Figma Design
-I created the whole design before starting building the application.
-**The HOME PAGE** is also designed but didn't get time to build it.
+## 😍 New Design
 
-<a href="https://www.figma.com/file/czpAvd5q0sG6OdvU3e3Mf5/SQL-Query-Editor?node-id=13%3A12"><b>Link To FIGMA</b></a>
+<a href="https://www.figma.com/file/czpAvd5q0sG6OdvU3e3Mf5/SQL-Query-Editor?node-id=211%3A19"><b>Link To FIGMA</b></a>
 
-![image](https://user-images.githubusercontent.com/54144759/175165559-cbdd6039-c18e-4b48-8841-6a5b6813cc1f.png)
+<img width="867" alt="image" src="https://user-images.githubusercontent.com/54144759/196059189-9cd70950-2462-4442-a4fe-b8dab4cb0272.png">
 
 
-<h2 align="center">THANK YOU!!!</h2>
+<h3 align="center">THANK YOU!!!</h3>
