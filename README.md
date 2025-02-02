@@ -5,9 +5,6 @@
 <br>
 <br>
 
-
-<p align="center"><img src="https://rawcdn.githack.com/GaganpreetKaurKalsi/SQL-Editor/b8b9d4909166700cee91eaf4a5616117de4ccc17/src/assets/logo.png" /></p>
-
 <h1 align="center">SQL Editor - Made with React</h1>
 
 <br>
